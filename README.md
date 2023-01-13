@@ -7,5 +7,5 @@ Warning: this program works only when opened/running. It saves data in RAM, so t
 
 Minimum system requiremets: Windows 7 32-bit.
 
-To run the program, you may need to install .NET Framework 4 or newer. Link to .NET Framework 4: 
+To run the program, you may need to install .NET Framework 4 or newer. Link to .NET Framework 4 download: 
 https://www.microsoft.com/en-US/Download/confirmation.aspx?id=17718
