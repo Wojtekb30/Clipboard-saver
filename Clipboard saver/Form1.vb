@@ -88,4 +88,33 @@
         Clipboard.SetText(ListBox1.SelectedItem.ToString())
         MsgBox("''" + ListBox1.SelectedItem.ToString() + "'' copied to clipboard.")
     End Sub
+
+    Private Sub ClearBtn_Click(sender As Object, e As EventArgs) Handles ClearBtn.Click
+        Dim nic As IList
+        ListBox1.DataSource = nic
+        ListBox1.Items.Add("---List cleared---")
+        ListBox1.Update()
+
+
+    End Sub
+
+    Private Sub Deletebtn_Click(sender As Object, e As EventArgs) Handles Deletebtn.Click
+        Dim numer As Int32
+        numer = ListBox1.SelectedIndex()
+        Dim lista As IList
+        Dim nic As IList
+        lista = ListBox1.DataSource
+        If lista.Count < 1 Then
+            lista.Add("---List cleared---")
+        End If
+        lista.RemoveAt(numer)
+        If lista.Count < 1 Then
+            lista.Add("---List cleared---")
+        End If
+        ListBox1.DataSource = nic
+        ListBox1.DataSource = lista
+        ListBox1.Update()
+
+
+    End Sub
 End Class

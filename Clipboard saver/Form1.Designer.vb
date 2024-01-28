@@ -32,6 +32,8 @@ Partial Class Form1
         Me.ButtonRestore = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.ClearBtn = New System.Windows.Forms.Button()
+        Me.Deletebtn = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,7 +50,7 @@ Partial Class Form1
         'Timer1
         '
         Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 1000
+        Me.Timer1.Interval = 500
         '
         'ListBox1
         '
@@ -61,7 +63,7 @@ Partial Class Form1
         Me.ListBox1.Location = New System.Drawing.Point(3, 67)
         Me.ListBox1.Name = "ListBox1"
         Me.ListBox1.ScrollAlwaysVisible = True
-        Me.ListBox1.Size = New System.Drawing.Size(1425, 655)
+        Me.ListBox1.Size = New System.Drawing.Size(1496, 655)
         Me.ListBox1.TabIndex = 1
         '
         'CheckBoxTime
@@ -97,6 +99,8 @@ Partial Class Form1
         '
         Me.Panel1.AutoSize = True
         Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Panel1.Controls.Add(Me.Deletebtn)
+        Me.Panel1.Controls.Add(Me.ClearBtn)
         Me.Panel1.Controls.Add(Me.SaveBtn)
         Me.Panel1.Controls.Add(Me.ButtonRestore)
         Me.Panel1.Controls.Add(Me.CheckBoxTime)
@@ -104,14 +108,32 @@ Partial Class Form1
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1425, 65)
+        Me.Panel1.Size = New System.Drawing.Size(1496, 65)
         Me.Panel1.TabIndex = 5
+        '
+        'ClearBtn
+        '
+        Me.ClearBtn.Location = New System.Drawing.Point(1025, 3)
+        Me.ClearBtn.Name = "ClearBtn"
+        Me.ClearBtn.Size = New System.Drawing.Size(155, 58)
+        Me.ClearBtn.TabIndex = 5
+        Me.ClearBtn.Text = "Clear all"
+        Me.ClearBtn.UseVisualStyleBackColor = True
+        '
+        'Deletebtn
+        '
+        Me.Deletebtn.Location = New System.Drawing.Point(1187, 4)
+        Me.Deletebtn.Name = "Deletebtn"
+        Me.Deletebtn.Size = New System.Drawing.Size(297, 58)
+        Me.Deletebtn.TabIndex = 6
+        Me.Deletebtn.Text = "Delete selected"
+        Me.Deletebtn.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(16.0!, 31.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1425, 721)
+        Me.ClientSize = New System.Drawing.Size(1496, 721)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.ListBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -134,4 +156,6 @@ Partial Class Form1
     Friend WithEvents ButtonRestore As Button
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents ClearBtn As Button
+    Friend WithEvents Deletebtn As Button
 End Class
